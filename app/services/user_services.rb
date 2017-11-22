@@ -3,9 +3,7 @@ class UserServices
   def get_imc(user:, weight:, height:)
      imc      = weight/(height * height)
      index  = set_imc_index(imc)
-     user.update(mass_index: index)
-
-     index
+     #user.update(mass_index: index)
   end
 
   def set_imc_index(imc)
