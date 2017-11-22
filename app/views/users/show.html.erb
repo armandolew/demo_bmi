@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+    <div class="alert alert-<%= current_user.as_decorated.show_mass_index[1]  %>">
+      <i class="<%= current_user.as_decorated.show_mass_index[2] %>"></i> <strong><%= current_user.as_decorated.show_mass_index[0] %></strong>
+       <br/>
+      <%= link_to "Recalculate BMI!",  "/", class: "btn btn-success" %>
+    </div>
+  </div>
+  </div>
+</div>
+
+

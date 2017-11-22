@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+  <div class="col-md-6">
+     <% if current_user.mass_index > 0 %>
+        <div class="alert alert-info">
+         Your BMI is: <%= current_user.mass_index %>
+        </div>
+     <% end %>
+
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Calculate your BMI
+      </div>
+
+      <div class="panel-body">
+        <%= simple_form_for :bmi , :url => users_calculate_bmi_path do |f| %>
+           <%= f.input :height, placeholder: "(meters 0.0)" %>
+           <%= f.input :weight, placeholder: "(kilograms 0.0)" %>
+           <%= f.button :submit, "Calculate!", class: "btn btn-success" %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</div>
